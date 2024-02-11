@@ -6,3 +6,13 @@ def home(request):
     t = loader.get_template("infos/main.html")
     c = {"test": "dodawanie"}
     return HttpResponse(t.render(c))
+
+def about_me(request):
+    t = loader.get_template("infos/about_me.html")
+    c = {}
+    return HttpResponse(t.render(c))
+
+def contact(request):
+    t = loader.get_template("infos/contact.html")
+    c = {}
+    return HttpResponse(t.render(c))

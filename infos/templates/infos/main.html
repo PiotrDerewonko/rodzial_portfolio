@@ -7,9 +7,9 @@
 <body>
     <nav>
         <ul>
-            <li><a href="''"> Home</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="">Contact</a></li>
-            <li><a href="">Me</a></li> <!-- Klasa zmieniająca kolor tekstu na biały -->
+            <li><a href="{% url 'about_me' %}">Me</a></li> <!-- Klasa zmieniająca kolor tekstu na biały -->
         </ul>
     </nav>
     <div>
