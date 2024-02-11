@@ -12,18 +12,16 @@
 <header class="logo">
     <nav>
         <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-            <li><a href="{% url 'me' %}">Me</a></li>
+            <li><a {% if active_tab == 'home' %} class='active' {% endif %} href="{% url 'home' %}">Home</a></li>
+            <li><a {% if active_tab == 'contact' %} class='active' {% endif %} href="{% url 'contact' %}">Contact</a>
+            </li>
+            <li><a {% if active_tab == 'me' %} class='active' {% endif %} href="{% url 'me' %}">Me</a></li>
         </ul>
     </nav>
 
 </header>
 <div>
-    {% block content %}
-        {{ test }}
 
-    {% endblock %}
 </div>
 
 
