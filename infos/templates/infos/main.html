@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
-    <title>Moje portfolio</title>
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
 </head>
 <body>
+<header class="logo">
     <nav>
         <ul>
             <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="{% url 'about_me' %}">Me</a></li> <!-- Klasa zmieniająca kolor tekstu na biały -->
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'me' %}">Me</a></li>
         </ul>
     </nav>
-    <div>
-        {% block content %}
-        {{  test }}
 
-        {% endblock %}
-    </div>
+</header>
+<div>
+    {% block content %}
+        {{ test }}
 
-
+    {% endblock %}
+</div>
 
 
 </body>
