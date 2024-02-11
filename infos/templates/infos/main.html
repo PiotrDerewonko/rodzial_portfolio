@@ -21,9 +21,25 @@
 
 </header>
 <div>
+    {%  block content %}
+    Strona poświęcona mojej osobie. Ponizej linki do podstron<br>
+    <a href="{% url 'contact' %}">Formularz kontaktowy</a>
+    <br>
+    <a href="{% url 'me' %}">Troche o mnie</a>
+    {%  endblock %}
 
 </div>
 
 
 </body>
+<footer>
+    <p>&copy; 2024 Moja Strona. Wszelkie prawa zastrzeżone.</p>
+    <nav>
+        <ul>
+            <li><a href="/polityka-prywatnosci">Polityka prywatności</a></li>
+            <li><a href="{% url 'contact' %}">Kontakt</a></li>
+        </ul>
+    </nav>
+</footer>
+
 </html>

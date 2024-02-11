@@ -1,8 +1,9 @@
 {% extends "infos/main.html" %}
 
 {% block title %}{{ title }}{% endblock %}
-
+{% load static %}
 {% block content %}
-    Tutaj bede o mnie jakies informacje wraz ze zdjeciem
+    Pisze w python. Głównie pandas i streamlit. Che teraz pisac w django.<br>
+    <img src="{% static 'images/img.png' %}" alt="Example">
 {% endblock %}
 
